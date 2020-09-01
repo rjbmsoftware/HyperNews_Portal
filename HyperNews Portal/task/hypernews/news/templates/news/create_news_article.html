@@ -1,0 +1,11 @@
+{% extends 'news/base.html' %}
+{% block title %} - Create news{% endblock %}
+{% block content %}
+    <a target="_blank" href="/news/">main page</a>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Title:<input type="text" name="title"></label><br>
+        <label>Text:<textarea cols="80" rows="10" name="text"></textarea></label><br>
+        <button type="submit">Create article</button>
+    </form>
+{% endblock %}
